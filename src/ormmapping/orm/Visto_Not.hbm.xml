@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="orm.Visto_Not" table="Visto_Not" lazy="false">
+		<id name="uid" column="uid" type="integer" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		<property name="visto" column="visto" type="string" length="255" not-null="true" lazy="false"/>
+		<many-to-one name="notificacionu" cascade="lock" column="Notificacionuid" class="orm.Notificacion" not-null="true" lazy="no-proxy" access="field">
+		</many-to-one>
+		<many-to-one name="contactou" cascade="lock" column="Contactouid" class="orm.Contacto" not-null="true" lazy="no-proxy" access="field">
+		</many-to-one>
+	</class>
+</hibernate-mapping>

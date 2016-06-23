@@ -1,0 +1,65 @@
+package capaNegocio;
+
+import org.orm.PersistentException;
+import org.orm.PersistentTransaction;
+
+public class Membresia {
+
+    private int uid;
+    private int contacto_id;
+    private int grupo_id;
+
+    public int getUid() {
+        return this.uid;
+    }
+
+    /**
+     *
+     * @param uid
+     */
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public int getContacto_id() {
+        return this.contacto_id;
+    }
+
+    /**
+     *
+     * @param contacto_id
+     */
+    public void setContacto_id(int contacto_id) {
+        this.contacto_id = contacto_id;
+    }
+
+    public int getGrupo_id() {
+        return this.grupo_id;
+    }
+
+    /**
+     *
+     * @param grupo_id
+     */
+    public void setGrupo_id(int grupo_id) {
+        this.grupo_id = grupo_id;
+    }
+
+    public int crearMembresia(Membresia membresia) throws PersistentException {
+        int respuesta = 0;
+        PersistentTransaction t = orm.BDProyecto2PersistentManager.instance().getSession().beginTransaction();
+
+        try {
+            orm.Membresia membresiaOrm = orm.MembresiaDAO.createMembresia();
+            orm.Contacto contacto = orm.ContactoDAO.loadContactoByORMID(membresia.getContacto_id());
+            orm.Grupos grupo = orm.GruposDAO.loadGruposByORMID(membresia.getGrupo_id());
+            membresiaOrm.setContactou(contacto);
+            membresiaOrm.setGruposu(grupo);
+            orm.MembresiaDAO.save(membresiaOrm);
+            t.commit();
+        } catch (Exception e) {
+            t.rollback();
+        }
+        return respuesta;
+    }
+}

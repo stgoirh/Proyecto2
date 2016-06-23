@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="orm.Actividad" table="Actividad" lazy="false">
+		<id name="uid" column="uid" type="integer" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		<many-to-one name="gruposu" cascade="lock" column="Gruposuid" class="orm.Grupos" not-null="false" lazy="no-proxy" access="field">
+		</many-to-one>
+		<property name="fecha" column="fecha" type="string" length="255" not-null="true" lazy="false"/>
+		<property name="descripcion" column="descripcion" type="string" length="255" not-null="false" lazy="false"/>
+		<set name="ORM_Visto_Act" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Actividaduid" not-null="true"/>
+			<one-to-many class="orm.Visto_Act"/>
+		</set>
+	</class>
+</hibernate-mapping>
