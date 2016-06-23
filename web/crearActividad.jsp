@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+
         <title>JSP Page</title>
     </head>
     <body style="background-color: chocolate">
@@ -55,22 +55,18 @@
                                 </div>                                
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-8">
                             <div class="form-group">
                                 <label for="listaContacto" class="col-sm-5 control-label">Elija un grupo para la Actividad</label>
                                 <div class="col-sm-7">
                                     <select class="form-control" name="select">
-                                <<i:forEach items="${lista}" var="grupo">
-                                    <option value="${grupo.uid}">${grupo.nombre} ${grupo.uid}</option>
-                                </i:forEach>
-                            </select>
-                                    
+                                        <<i:forEach items="${lista}" var="grupo">
+                                            <option value="${grupo.uid}">${grupo.nombre} ${grupo.uid}</option>
+                                        </i:forEach>
+                                    </select>
                                 </div>
-                                 
-                                
                             </div>
-                           
                         </div>
                     </center>
                     <div class="row">

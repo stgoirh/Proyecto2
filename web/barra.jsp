@@ -38,6 +38,7 @@
                         <li><a href="#">Buscar Grupo</a></li>
                         <li><a href="#">Eliminar Grupo</a></li>
                         <li><a href="CrearActividad">Crear Actividad</a></li>
+                        <li><a href="CrearNotificacion">Crear Notificacion</a></li>
                     </ul>
                 </li>    
             </ul>
