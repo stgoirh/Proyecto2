@@ -164,5 +164,23 @@ public class Grupo {
         // TODO - implement Grupo.busquedaMiembros
         throw new UnsupportedOperationException();
     }
+    
+        public List<Grupo> getGrupos() throws PersistentException{
 
+        List<Grupo> listaGrupos= new ArrayList<Grupo>();
+        List<orm.Grupos> ListaOrm=new ArrayList<orm.Grupos>();
+        ListaOrm=orm.GruposDAO.queryGrupos(null,null);
+       
+        for(int i=0;i<ListaOrm.size();i++){
+            Grupo grupo = new Grupo();
+            grupo.setNombre(ListaOrm.get(i).getNombre());
+            grupo.setDescripcion(ListaOrm.get(i).getDescripcion());
+            grupo.setFechaCreacion(ListaOrm.get(i).getFechaCreacion());
+            grupo.setUid(ListaOrm.get(i).getUid());
+            //contacto.setApellido_contacto(ListaOrm.get(i).getApellido_contacto());            
+            listaGrupos.add(grupo);
+        }
+        return listaGrupos;
+
+    }
 }
