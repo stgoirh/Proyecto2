@@ -28,14 +28,22 @@
                         <li><a href="EditarContacto">Editar Contacto</a></li>
                         <li><a href="EliminarContacto">Eliminar Contacto</a></li>
                         <li><a href="BuscarContacto">Buscar Contacto</a></li>
-                        <li><a href="ContactosList">Ver Contactos</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Grupos<span class="caret"</span></a>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Actividades<span class="caret"</span></a>
                     <ul class="dropdown-menu">
-                        <li><a></</li>
+                        <li><a href="CrearActividad">Crear Actividad</a></li>
+                        <li><a href="VerActividad">Ver Actividad</a></li>
+                        <li><a href="VistosActividad">Ver Vistos</a></li>
                     </ul>
-                </li>    
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Notificaciones<span class="caret"</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="CrearNotificacion">Crear Notificacion</a></li>
+                        <li><a href="VerNotificacion">Ver Notificacion</a></li>
+                        <li><a href="VistosNotificacion">Ver Vistos</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </body>
