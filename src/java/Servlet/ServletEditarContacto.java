@@ -75,7 +75,7 @@ public class ServletEditarContacto extends HttpServlet {
 
         try {
             resultado = "se ha editado el contacto de uid: "+String.valueOf(contactoNegocio.editarContactoCapanegocio(contactoNegocio));
-        } catch (PersistentException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(ServletAgregarContacto.class.getName()).log(Level.SEVERE, null, ex);
         }
         request.setAttribute("resultado", resultado);

@@ -33,12 +33,7 @@
                 </li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Grupos<span class="caret"</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="CrearGrupo">Crear Grupo</a></li>
-                        <li><a href="#">Editar Grupo</a></li>
-                        <li><a href="#">Buscar Grupo</a></li>
-                        <li><a href="#">Eliminar Grupo</a></li>
-                        <li><a href="CrearActividad">Crear Actividad</a></li>
-                        <li><a href="CrearNotificacion">Crear Notificacion</a></li>
+                        <li><a></</li>
                     </ul>
                 </li>    
             </ul>

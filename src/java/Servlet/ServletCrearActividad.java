@@ -71,13 +71,12 @@ public class ServletCrearActividad extends HttpServlet {
         Grupo grupoNegocio = new Grupo();
 
         grupoNegocio.setUid(Integer.parseInt(uidGrupo));
-        actividadNegocio.setNombre(nombreActividad);
         actividadNegocio.setFecha(fechaActividad);
         actividadNegocio.setDescripcion(descripcionActividad);
 
         String respuesta = "no se he creado la actividad";
         try {
-            respuesta = "se ha creado la actividad de uid: " + String.valueOf(actividadNegocio.crearActividad(actividadNegocio, grupoNegocio)) + " del grupo de uid: " + grupoNegocio.getUid();
+            respuesta = "se ha creado la actividad de uid: " + String.valueOf(actividadNegocio.crearActividad(actividadNegocio)) + " del grupo de uid: " + grupoNegocio.getUid();
         } catch (Exception e) {
         }
         request.setAttribute("resultado", respuesta);

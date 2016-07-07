@@ -13,7 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body style="background-color: chocolate;">
-        <jsp:include page="barra.jsp"/>
+        <jssp:include page="barra.jsp"/>
         
         <div class="container">
             <div class="jumbotron">
